@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int puntos = 0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Numero de orden de inscripcion: ");
+        int numeroalumno = scanner.nextInt();
+
+        System.out.println("¿ tienes algun hermano en el centro? (0: no / 1:si) ");
+        if (scanner.nextInt() == 1) {
+            puntos += 40;
+        }
+
+        System.out.println("¿Vives en la misma poblacion? (0: no / 1:si) ");
+        if (scanner.nextInt() == 1) {
+            puntos += 30;
+        }else{ System.out.println("¿tus padres trabajan en la misma poblacion ? (0: no / 1:si) ");
+            if (scanner.nextInt() == 1) {
+                puntos += 20;
+            }
+
+        }
+
+        System.out.println("¿ Dispacidad igual o supeior al 33% o enfermedad cronica ? (0: no / 1:si) ");
+        if (scanner.nextInt() == 1) {
+            puntos += 10;
+        }
+
+        System.out.println("¿familia numerosa o monoparental ? (0: no / 1:si) ");
+        if (scanner.nextInt() == 1) {
+            puntos += 15;
+        }
+
+
+        System.out.println("¿escolarizado padre, madre o germano? (0: no / 1:si) ");
+        if (scanner.nextInt() == 1) {
+            puntos += 5;
+        }
+
+
+        System.out.println("el alumno :" +numeroalumno+ " tiene un total de : "+puntos);
+        scanner.close();
+    }
+}
