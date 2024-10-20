@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        final double largo = 300.3;
+
+        System.out.println("introduce el ancho de la 1 piscina: ");
+        double ancho1 =scanner.nextDouble();
+        System.out.println("introduce la profundidad de la 1 piscina: ");
+        double profundidad1 = scanner.nextDouble();
+
+        System.out.println("introduce el ancho de la 2 piscina: ");
+        double ancho2= scanner.nextDouble();
+        System.out.println("introduce la profundidad de la 2 piscina: ");
+        double profundidad2 = scanner.nextDouble();
+
+        //Calcular el area de cada una de las piscinas
+        double area1=  (int)largo*ancho1;
+        double area2=  (int)largo*ancho2;
+
+        //Calcular el volumen de cada una de las piscinas
+        double volumen1= (int)area1*profundidad1;
+        double volumen2= (int)area2*profundidad2;
+
+        //calcular los valores de la piscina juntas una al lado de la otra
+        double anchototal= ancho2+ancho1;
+
+        //el area que ocupan las dos piscina una al lado de la otra
+        double areatotal =(ancho2+ancho1)+largo;
+
+        //el volumen que ocupan las dos piscinas
+        double volumentotal= volumen1+volumen2;
+
+        // nuevo volumen cambian la profundidad de las piscinas entre si
+        double intercambioprofundidad = profundidad1;
+        profundidad1 = profundidad2;
+        profundidad2 = intercambioprofundidad;
+
+        double nuevovolumen1 = area1*profundidad1;
+        double nuevovolumen2 = area2*profundidad2;
+
+
+
+    }
+}
